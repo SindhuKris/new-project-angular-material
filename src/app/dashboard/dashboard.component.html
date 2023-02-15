@@ -1,0 +1,20 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side"> -->
+      <p>content</p>
+      <p *ngIf="showFiller"> content</p>
+      <button (click)="showFiller = !showFiller" mat-raised-button>
+        text
+      </button>
+      <button class="categories" routerLink="categories">Category
+      </button>
+      <button class="orders" routerLink="orders">Orders
+      </button>
+      <router-outlet></router-outlet>
+      
+    </mat-drawer>
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle ()">
+        content
+      </button>
+    </div>
+  </mat-drawer-container>
